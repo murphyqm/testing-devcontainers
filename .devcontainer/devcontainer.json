@@ -6,7 +6,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -16,6 +16,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "conda env create --file .devcontainer/env_files/packaging_env.yml"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
