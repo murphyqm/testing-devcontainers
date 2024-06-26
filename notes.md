@@ -28,6 +28,13 @@ dependencies:
     - black
 ```
 
-`conda create --name test-packing-oneliner python=3.12 pytest setuptools sphinx pip pip::black`
+`conda create --name packaging-env python=3.12 pytest setuptools sphinx`
+`conda create --name formatting-env python=3.12 pip`
+`conda activate formatting-env`
+`pip install black`
+`pip install ruff`
+`conda deactivate formatting-env`
 
-This doesn't wprk; need to figure out the pip dependencies
+This doesn't work; need to figure out the pip dependencies
+
+Ok, instead just create a separate linter env
