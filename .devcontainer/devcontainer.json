@@ -17,12 +17,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
 	// "postCreateCommand": "conda env create --file .devcontainer/env_files/packaging_env.yml"
-	"postCreateCommand": "conda create --name packaging-env python=3.12 pytest setuptools sphinx",
-	"postCreateCommand": "conda create --name formatting-env python=3.12 pip",
-	"postCreateCommand": "conda activate formatting-env",
-	"postCreateCommand": "pip install black",
-	"postCreateCommand": "pip install ruff",
-	"postCreateCommand": "conda deactivate formatting-env",
+	"postCreateCommand": "conda create --name packaging-env python=3.12 pytest setuptools sphinx && conda create --name formatting-env python=3.12 pip && conda activate formatting-env && pip install black && pip install ruff && conda deactivate formatting-env",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
