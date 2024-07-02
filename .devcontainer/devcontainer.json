@@ -6,7 +6,7 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -16,6 +16,11 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
+	//"postCreateCommand": "conda env create --file .devcontainer/env_files/packaging_env.yml"
+	// "postCreateCommand": "conda env create --file .devcontainer/env_files/packaging_env.yml && conda env create --file .devcontainer/env_files/linting_env.yml"
+	//"postCreateCommand": "conda create --name packaging-env python=3.12 pytest setuptools sphinx -y && conda create --name formatting-env python=3.12 pip -y && conda activate formatting-env && pip install black --yes && pip install ruff --yes && conda deactivate formatting-env",
+	"postCreateCommand": "conda create --name packaging-env python=3.12 pytest setuptools sphinx -y",
+
 
 	// Configure tool-specific properties.
 	// "customizations": {},
