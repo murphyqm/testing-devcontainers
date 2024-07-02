@@ -24,6 +24,21 @@
 
 	// Configure tool-specific properties.
 	// "customizations": {},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"streetsidesoftware.code-spell-checker",
+				"njpwerner.autodocstring",
+				"usernamehw.errorlens",
+				"tamasfe.even-better-toml",
+				"ninoseki.vscode-mogami",
+				"KevinRose.vsc-python-indent",
+				"charliermarsh.ruff"
+			]
+		}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
